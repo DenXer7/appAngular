@@ -6,8 +6,7 @@ import { CreateBuyerComponent } from './buyers/create-buyer/create-buyer.compone
 import { IndexBuyerComponent } from './buyers/index-buyer/index-buyer.component';
 import { IndexSellerComponent } from './sellers/index-seller/index-seller.component';
 import { CreateSellerComponent } from './sellers/create-seller/create-seller.component';
-import { HeaderComponent } from './xmenu/header/header.component';
-import { SideNavComponent } from './xmenu/side-nav/side-nav.component';
+import { AddProviderModalComponent } from './buyers/add-provider-modal/add-provider-modal.component';
 
 
 const routes: Routes = 
@@ -17,6 +16,7 @@ const routes: Routes =
         [
             {path: 'buyers', component: IndexBuyerComponent},
             {path: 'buyers/create', component: CreateBuyerComponent},
+            {path: 'buyers/addProvider-modal', component: AddProviderModalComponent},
             
             {path: 'sellers', component: IndexSellerComponent},
             {path: 'sellers/create', component  : CreateSellerComponent},

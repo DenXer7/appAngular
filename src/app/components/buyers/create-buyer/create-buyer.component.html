@@ -1,3 +1,4 @@
+<!-- Formulario para comprar -->
 <section class="container-fluid">
   <div class="row">
     <div class="card col-12 p-0">
@@ -25,7 +26,7 @@
             </div>
           </div>
 
-          <div class="col-md-2 d-flex align-items-center">
+          <div class="col-md-2 d-flex align-items-center justify-content-center">
             <div class="form-group form-check">
               <input type="checkbox" class="form-check-input" id="detail-buyer">
               <label class="form-check-label" for="detail-buyer">Detalle</label>
@@ -43,9 +44,10 @@
   </div>
 </section>
 
+<!-- Tabla Lista de compras -->
 <section class="container-fluid">
   <div class="row">
-    <!-- Editable table -->
+
     <div class="card col-12 p-0">
 
       <div class="card-body">
@@ -63,7 +65,7 @@
                   <th scope="col" class="align-middle">Marca <br> Modelo</th>
                   <th scope="col" class="align-middle">Detalle</th>
                   <th scope="col" class="align-middle">Precio</th>
-                  <th scope="col" class="align-middle text-right">Acción</th>
+                  <th scope="col" class="align-middle">Acción</th>
                 </tr>
               </thead>
               <tbody>
@@ -92,7 +94,7 @@
                   <td class="align-middle">Moto c</td>
                   <td class="align-middle">x</td>
                   <td class="align-middle">s/100</td>
-                  <td class="d-flex justify-content-around">
+                  <td class="align-middle">
                     <a href="#"><i class="fas fa-pencil-alt mr-4"></i></a>
                     <a href="#"><i class="far fa-trash-alt"></i></a>
                   </td>
@@ -117,13 +119,19 @@
             </table>
 
             <div class="col-md-2 mt-4 mt-md-0 p-0 text-center float-right ">
-              <a class="btn btn-success btn-block"><i class="far fa-money-bill-alt mr-2"></i>PAGAR</a>
+              <button type="button" class="btn btn-success btn-block" data-toggle="modal" data-target="#exampleModalCenter">
+                <i class="far fa-money-bill-alt mr-2" data-target="#exampleModalCenter"></i>
+                Pagar
+              </button>
             </div>
 
           </div>
         </div>
       </div>
     </div>
-<!-- Editable table -->
   </div>
 </section>
+
+<!-- Modal proveedor -->
+<app-add-provider-modal></app-add-provider-modal>
+
