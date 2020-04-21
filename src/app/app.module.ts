@@ -18,6 +18,7 @@ import { HeaderComponent } from './components/xmenu/header/header.component';
 import { IndexBuyerComponent } from './components/buyers/index-buyer/index-buyer.component';
 import { CreateBuyerComponent } from './components/buyers/create-buyer/create-buyer.component';
 import { AddProviderModalComponent } from './components/buyers/add-provider-modal/add-provider-modal.component';
+import { ModalViewBuyComponent } from './components/buyers/modal-view-buy/modal-view-buy.component';
     // sellers
 import { CreateSellerComponent } from './components/sellers/create-seller/create-seller.component';
 import { IndexSellerComponent } from './components/sellers/index-seller/index-seller.component';
@@ -35,7 +36,8 @@ import { IndexSellerComponent } from './components/sellers/index-seller/index-se
     IndexBuyerComponent,
     CreateSellerComponent,
     IndexSellerComponent,
-    AddProviderModalComponent
+    AddProviderModalComponent,
+    ModalViewBuyComponent
   ],
   imports: [
     BrowserModule,

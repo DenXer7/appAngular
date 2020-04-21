@@ -7,6 +7,7 @@ import { IndexBuyerComponent } from './buyers/index-buyer/index-buyer.component'
 import { IndexSellerComponent } from './sellers/index-seller/index-seller.component';
 import { CreateSellerComponent } from './sellers/create-seller/create-seller.component';
 import { AddProviderModalComponent } from './buyers/add-provider-modal/add-provider-modal.component';
+import { ModalAddProviderComponent } from './buyers/modal-add-provider/modal-add-provider.component';
 
 
 const routes: Routes = 
@@ -27,6 +28,6 @@ const routes: Routes =
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
-  declarations:[]
+  declarations:[ModalAddProviderComponent]
 })
 export class HomeRoutingModule { }
