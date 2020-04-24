@@ -39,9 +39,6 @@ $(document).ready(function(){
   var footer = $('.footer-content').height();
   var footerCSS = {"margin-bottom":footer+'px'};
 
-  console.log(footer);
-  console.log(footerCSS);
-
   $(window).on('scroll', function(){
     if( $(window).scrollTop() > 0){
       $('.header-content').addClass('header-main-fixed');
@@ -50,6 +47,10 @@ $(document).ready(function(){
       $('.header-content').removeClass('header-main-fixed');
     }
   });
+
+  var tamañoVentana = $(window).height();
+  // var tamañoVentanaCSS = {"height": tamañoVentana+'px'};
+  console.log(tamañoVentana);
 
 });
 

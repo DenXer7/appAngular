@@ -26,9 +26,9 @@
 .submenu-fixed a{
     display: block;
     line-height: 60px;
-    font-size: 12px;
+    font-size: 10px;
     line-height: 40px;
-    
+    color: #4285F4;
 }
 .submenu-fixed i{
     font-size: 25px;
@@ -38,3 +38,33 @@
 .submenu-fixed-item{
     padding-top: 25px;
 }
+
+.header-content h3, h5{
+    margin: 0;
+}
+
+
+
+//  MODAL
+.btn-close-modal{
+    position: absolute;
+    top: 5px;
+    right: 15px;
+}
+
+.header-form-modal label,p{
+    margin: 0;
+}
+
+.input-form-modal{
+    margin-bottom: 0;
+}
+
+.select-form-modal label{
+    margin-bottom: 3px;
+    font-size: 14px;
+    
+}
+
+
+

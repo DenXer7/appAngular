@@ -1,15 +1,18 @@
 <div class="container-fluid header-content">
     <div class="row">
-        <div class="card col-md-12 pt-2">
-            <div class="row mb-3">
-                <div class="col-9">
-                    <h3 class="modal-title ">Samsung A10</h3>
+        <div class="card col-md-12 pt-3">
+            <div class="row d-flex align-items-center">
+
+                <div class="col">
+                    <h3>Samsung A10</h3>
                     <p>Codigo: 7</p>
                 </div>
-                <div class="col-3 d-flex flex-column justify-content-center ">
-                    <h4>Costo</h4>
+
+                <div class="col text-center">
+                    <h5>costo</h5>
                     <p><b>s/ 120.00</b></p>
                 </div>
+
             </div>
         </div>
     </div>
@@ -106,21 +109,21 @@
     <div class="row">
         <div class="card col-sm-12 mb-0">
             <div class="row d-flex justify-content-between">
-                <div class="col-2 text-center submenu-fixed-item">
+                <div class="col text-center submenu-fixed-item">
                     <a [routerLink]="['/buyers/1']" class="" >
                         <i class="fas fa-arrow-left"></i>
                         Atras
                     </a>
                 </div>
 
-                <div class="col-2 text-center submenu-fixed-item">
+                <div class="col text-center submenu-fixed-item">
                     <a [routerLink]="['/buyers/1/1']"  >
                         <i class="far fa-save"></i>
                         Guardar
                     </a>
                 </div>
 
-                <div class="col-2 text-center submenu-fixed-item">
+                <div class="col text-center submenu-fixed-item">
                     <div class="navbar-nav">
                         <a data-widget="pushmenu" href="#" role="button">
                             <i class="fas fa-bars"></i>
@@ -129,13 +132,13 @@
                     </div>
                 </div>
                 
-                <div class="col-2 text-center submenu-fixed-item ">
-                    <a [routerLink]="['/buyers/1/1']">
+                <div class="col text-center submenu-fixed-item ">
+                    <a data-toggle="modal" data-target="#modal-repair">
                         <i class="fas fa-user-cog"></i>
                         Técnico
                     </a>
                 </div>
-                <div class="col-2 text-center submenu-fixed-item">
+                <div class="col text-center submenu-fixed-item">
                     <a [routerLink]="['/buyers/1/1']">
                         <i class="fas fa-arrow-right"></i>
                         Siguiente
@@ -143,6 +146,185 @@
                 </div>
             </div>
 
+        </div>
+    </div>
+</div>
+
+
+
+<div class="modal" role="dialog" id="modal-repair">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <label>Reparación</label>
+                        <!-- <p>Samsung A10</p> -->
+                        <!-- <p>codigo: 7</p> -->
+                    </div>
+                    
+                </div>
+                <div class="btn-close-modal">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                </div>
+
+                <div class="row">
+                    <div class="col-8 ">
+                        <div class="md-form input-form-modal">
+                            <input type="text" id="type-repair" class="form-control " mdbInput value="Cambio táctil">
+                            <label for="type-repair">Tipo reparación</label>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="md-form input-form-modal">
+                            <input type="text" id="preice-repair" class="form-control" mdbInput value="70">
+                            <label for="preice-repair">Precio</label>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+
+                <div class="row">
+                    <div class="form-group col-8 select-form-modal">
+                        <label for="technical">Técnico</label>
+                        <select class="form-control" id="technical">
+                            <option>Dante</option>
+                            <option>Chulls</option>
+                        </select>
+                    </div>
+    
+                    <div class="col-4 d-flex align-items-center">
+                        <button class="btn-sm btn-primary">Agregar</button>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="table-responsive-sm mt-2 col-12">
+                        <table mdbTable mdbTableScroll scrollY="false" maxHeight="">
+                          <thead>
+                            <tr>
+                              <th scope="col" class="align-middle text-center">Reparación</th>
+                              <th scope="col" class="align-middle">Precio</th>
+                              <th scope="col" class="align-middle">Técnico</th>
+                              <th scope="col" class="align-middle">Fecha</th>
+                              <!-- <th scope="col" class="align-middle">Estado</th> -->
+                              <th scope="col" class="align-middle text-center">Acción</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td class="align-middle">Cambio tactil</td>
+                              <td class="align-middle">s/70</td>
+                              <td class="align-middle">Dante</td>
+                              <td class="align-middle">02/02</td>
+                              <td class="align-middle text-center">
+                                <a [routerLink]="['/buyers/1/1']"  >
+                                    <i class="fas fa-pencil-alt"></i>
+                                </a>
+                              </td>
+                            </tr>
+                            <tr>
+                                <td class="align-middle">Cambio tactil</td>
+                                <td class="align-middle">s/70</td>
+                                <td class="align-middle">Dante</td>
+                                <td class="align-middle">02/02</td>
+                                <td class="align-middle text-center">
+                                  <a [routerLink]="['/buyers/1/1']"  >
+                                      <i class="fas fa-pencil-alt"></i>
+                                  </a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="align-middle">Cambio tactil</td>
+                                <td class="align-middle">s/70</td>
+                                <td class="align-middle">Dante</td>
+                                <td class="align-middle">02/02</td>
+                                <td class="align-middle text-center">
+                                  <a [routerLink]="['/buyers/1/1']"  >
+                                      <i class="fas fa-pencil-alt"></i>
+                                  </a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="align-middle">Cambio tactil</td>
+                                <td class="align-middle">s/70</td>
+                                <td class="align-middle">Dante</td>
+                                <td class="align-middle">02/02</td>
+                                <td class="align-middle text-center">
+                                  <a [routerLink]="['/buyers/1/1']"  >
+                                      <i class="fas fa-pencil-alt"></i>
+                                  </a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="align-middle">Cambio tactil</td>
+                                <td class="align-middle">s/70</td>
+                                <td class="align-middle">Dante</td>
+                                <td class="align-middle">02/02</td>
+                                <td class="align-middle text-center">
+                                  <a [routerLink]="['/buyers/1/1']"  >
+                                      <i class="fas fa-pencil-alt"></i>
+                                  </a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="align-middle">Cambio tactil</td>
+                                <td class="align-middle">s/70</td>
+                                <td class="align-middle">Dante</td>
+                                <td class="align-middle">02/02</td>
+                                <td class="align-middle text-center">
+                                  <a [routerLink]="['/buyers/1/1']"  >
+                                      <i class="fas fa-pencil-alt"></i>
+                                  </a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="align-middle">Cambio tactil</td>
+                                <td class="align-middle">s/70</td>
+                                <td class="align-middle">Dante</td>
+                                <td class="align-middle">02/02</td>
+                                <td class="align-middle text-center">
+                                  <a [routerLink]="['/buyers/1/1']"  >
+                                      <i class="fas fa-pencil-alt"></i>
+                                  </a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="align-middle">Cambio tactil</td>
+                                <td class="align-middle">s/70</td>
+                                <td class="align-middle">Dante</td>
+                                <td class="align-middle">02/02</td>
+                                <td class="align-middle text-center">
+                                  <a [routerLink]="['/buyers/1/1']"  >
+                                      <i class="fas fa-pencil-alt"></i>
+                                  </a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="align-middle">Cambio tactil</td>
+                                <td class="align-middle">s/70</td>
+                                <td class="align-middle">Dante</td>
+                                <td class="align-middle">02/02</td>
+                                <td class="align-middle text-center">
+                                  <a [routerLink]="['/buyers/1/1']"  >
+                                      <i class="fas fa-pencil-alt"></i>
+                                  </a>
+                                </td>
+                              </tr>
+              
+                          </tbody>
+                        </table>
+                      </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                  </div>
+            </div>
         </div>
     </div>
 </div>
