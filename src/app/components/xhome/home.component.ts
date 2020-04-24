@@ -10,6 +10,16 @@ export class HomeComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    $(document).ready(function(){
+      // var altura = $('.main-header').offset().top;
+      // console.log(altura);
+
+      // var header = $("nav").last().offset().top;
+      // console.log(header);
+      // console.log( $(window).scrollTop());
+    });
   }
 
 }
+
+

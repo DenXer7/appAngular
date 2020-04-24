@@ -2,10 +2,10 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-index-buyer',
-  templateUrl: './index-buyer.component.html',
-  styleUrls: ['./index-buyer.component.scss']
+  templateUrl: './index-buy.component.html',
+  styleUrls: ['./index-buy.component.scss']
 })
-export class IndexBuyerComponent implements OnInit {
+export class IndexBuyComponent implements OnInit {
 
   constructor() { }
 

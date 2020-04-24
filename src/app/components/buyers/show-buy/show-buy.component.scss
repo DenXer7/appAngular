@@ -1,0 +1,23 @@
+.header-main-fixed{
+  position: fixed;
+  z-index: 110;
+  top: 0;
+  width: 100%;
+  max-width: 100vw;
+}
+
+.footer-content{
+  position: fixed;
+  z-index: 110;
+  bottom: 0px;
+}
+
+table th, td{
+  text-align: center;
+}
+
+table th{
+  padding-left:0 ;
+  padding-right: 0;
+  // width: 1%;
+}

@@ -15,10 +15,12 @@ import { HomeComponent } from './components/xhome/home.component';
 import { SideNavComponent } from './components/xmenu/side-nav/side-nav.component';
 import { HeaderComponent } from './components/xmenu/header/header.component';
     // buyers
-import { IndexBuyerComponent } from './components/buyers/index-buyer/index-buyer.component';
-import { CreateBuyerComponent } from './components/buyers/create-buyer/create-buyer.component';
-import { AddProviderModalComponent } from './components/buyers/add-provider-modal/add-provider-modal.component';
+import { IndexBuyComponent } from './components/buyers/index-buy/index-buy.component';
+import { CreateBuyComponent } from './components/buyers/create-buy/create-buy.component';
+import { ModalAddProviderComponent } from './components/buyers/modal-add-provider/modal-add-provider.component';
+import { EditItemBuyComponent } from './components/buyers/edit-item-buy/edit-item-buy.component';
 import { ModalViewBuyComponent } from './components/buyers/modal-view-buy/modal-view-buy.component';
+import { ShowBuyComponent } from './components/buyers/show-buy/show-buy.component';
     // sellers
 import { CreateSellerComponent } from './components/sellers/create-seller/create-seller.component';
 import { IndexSellerComponent } from './components/sellers/index-seller/index-seller.component';
@@ -32,12 +34,14 @@ import { IndexSellerComponent } from './components/sellers/index-seller/index-se
     HomeComponent,
     SideNavComponent,
     HeaderComponent,
-    CreateBuyerComponent,
-    IndexBuyerComponent,
+    CreateBuyComponent,
+    IndexBuyComponent,
     CreateSellerComponent,
     IndexSellerComponent,
-    AddProviderModalComponent,
-    ModalViewBuyComponent
+    ModalAddProviderComponent,
+    ModalViewBuyComponent,
+    ShowBuyComponent,
+    EditItemBuyComponent
   ],
   imports: [
     BrowserModule,

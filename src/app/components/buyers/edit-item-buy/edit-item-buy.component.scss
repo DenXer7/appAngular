@@ -1,0 +1,40 @@
+// HEADER FIXED
+.header-main-fixed{
+    position: fixed;
+    z-index: 110;
+    top: 0;
+    width: 100%;
+    max-width: 100vw;
+  }
+
+// FOOTER FIXED
+.footer-content{
+    position: fixed;
+    z-index: 110;
+    bottom: 0px;
+}
+
+// ESPACIADO ENTRE INPUTS EN MOBILE
+.input-form{
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+
+
+// POSICIONAMIENTO DE LOS ICONOS DEL FOOTER-FIXED
+.submenu-fixed a{
+    display: block;
+    line-height: 60px;
+    font-size: 12px;
+    line-height: 40px;
+    
+}
+.submenu-fixed i{
+    font-size: 25px;
+    display: block;
+    line-height: 0;
+}
+.submenu-fixed-item{
+    padding-top: 25px;
+}

@@ -1,0 +1,131 @@
+================= COMPRAS =================
+create, edit@lista      => Ventana | Formulario para crear una Lista de compras
+index@lista             => Ventana | Tabla para mostrar todas las Listas compras
+show@lista              => Ventana | para mostrar UNA Lista de compras
+    edit@celular            => Ventana | Formulario con datos de un celular para ser editados
+    show@celular            => Pop up  |  de un solo celular
+
+----------------- REPARACION ------------------
+index, show, create, edit@reparacion=> Pop up con formulario y tabla para reparacion DENTRO COMPRAS@edit
+
+============================================
+
+
+
+
+<!-- MODAL -->
+<div class="modal fade" id="modalPrueba" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-11">
+                        <a href=""><mdb-icon fas icon="cogs"></mdb-icon></a>
+                        <a href=""><mdb-icon far icon="trash-alt"></mdb-icon></a>
+                        <a href=""><mdb-icon far icon="save"></mdb-icon></a>
+                    </div>
+                    <div class="col-sm-1">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <i class="far fa-times-circle"></i>
+                        </button>
+                    </div>
+                </div>
+    
+                <div class="row">
+                    <div class="col-9">
+                        <h3 class="modal-title ">Samsung A10</h3>
+                        <p>Codigo: 7</p>
+                    </div>
+                    <div class="col-3 d-flex flex-column justify-content-center ">
+                        <h4>Costo</h4>
+                        <p><b>s/ 120.00</b></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div class="modal-header d-flex justify-content-center align-items-center pb-0">
+               
+                
+            </div> -->
+
+            <div class="modal-body modalxy">
+
+                <div class="row d-flex align-items-center">
+                    <div class="col-sm-6 ">
+                        <select class="form-control">
+                            <option>Modelo</option>
+                            <option>Samsung</option>
+                            <option>Huawei</option>
+                            <option>Motorola</option>
+                            <option>LG</option>
+                        </select>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <div class="md-form">
+                            <input type="text" id="model" class="form-control" mdbInput>
+                            <label for="model">Modelo</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row d-flex align-items-center">
+                    <div class="col-sm-6">
+                        <div class="md-form">
+                            <input type="number" id="price_buy" class="form-control" mdbInput>
+                            <label for="price_buy">Precio compra</label>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <select class="form-control">
+                            <option>Verificando</option>
+                            <option>Disponible</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="md-form">
+                            <input type="number" id="price_sale_min" class="form-control" mdbInput>
+                            <label for="price_sale_min">Precio venta min</label>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <div class="md-form">
+                            <input type="number" id="price_sale_max" class="form-control" mdbInput>
+                            <label for="price_sale_max">Precio venta max</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="md-form">
+                            <input type="text" id="mac" class="form-control" mdbInput>
+                            <label for="mac">MAC (codigo unico)</label>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 d-flex justify-content-center align-items-center">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="detail">
+                            <label class="form-check-label" for="detail">
+                                Detalle
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="modal-footer">
+                <a href=""><mdb-icon fas icon="cogs"></mdb-icon></a>
+                <a href=""><mdb-icon far icon="trash-alt"></mdb-icon></a>
+            </div>
+        </div>
+    </div>
+</div>
