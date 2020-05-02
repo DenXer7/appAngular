@@ -1,17 +1,3 @@
-.header-main-fixed{
-  position: fixed;
-  z-index: 110;
-  top: 0;
-  width: 100%;
-  max-width: 100vw;
-}
-
-.footer-content{
-  position: fixed;
-  z-index: 110;
-  bottom: 0px;
-}
-
 table th, td{
   text-align: center;
 }
@@ -21,3 +7,25 @@ table th{
   padding-right: 0;
   // width: 1%;
 }
+
+.table-show-buy .model{
+  margin: 0;
+  text-align: initial;
+  padding: 7px 0;
+}
+.model p{
+  margin: 0;
+}
+
+
+.dropdown-menu{
+  top: -100% !important;
+  left: -100% !important;
+}
+.dropdown-menu i{
+  color: #4285F4;
+}
+.activex{
+  background: blue !important;
+}
+

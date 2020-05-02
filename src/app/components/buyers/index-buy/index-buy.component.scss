@@ -5,3 +5,24 @@
 
 
 
+.content-card{
+    padding: 10px 60px;
+}
+
+.content-card-direction{
+    position: absolute;
+    top: 43px;
+    left: 0;
+    color: #4285F4;
+}
+.content-card-direction a{
+    font-size: 10px;
+    display: flex;
+    justify-content: center;
+    line-height: 10px;
+}
+.content-card-direction i{
+    font-size: 25px;
+    position: absolute;
+    top: -26px;
+}

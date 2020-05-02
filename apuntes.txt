@@ -129,3 +129,132 @@ index, show, create, edit@reparacion=> Pop up con formulario y tabla para repara
         </div>
     </div>
 </div>
+
+
+
+
+
+INDEX buy
+======================================================================================
+
+<section class="container-fluid">
+  <div class="row">
+    <div class="card col-12 p-0">
+      <div class="card-body">
+        
+        <div class="row">
+          <div class="col-sm-12">
+            <h3 class="card-title">Lista de compras</h3>
+          </div>
+        </div>
+
+        <div class="row">
+
+          <div class="col-md-3">
+            <div class="md-form">
+              <a class="d-flex justify-content-end icon-search">
+                <mdb-icon fas icon="search" class="prefix justify-content-end" float-right></mdb-icon>
+              </a>
+              <input mdbInput placeholder="total, cantidad, proveedor" type="text" id="form58" class="form-control">
+              <label for="form58">Buscar</label>
+            </div>
+          </div>
+
+          <div class="col-md-2 ">
+            <div class="md-form">
+              <a class="d-flex justify-content-end icon-search">
+                <mdb-icon fas icon="search" class="prefix justify-content-end" float-right></mdb-icon>
+              </a>
+              <input type="text" id="date-min" class="form-control" mdbInput>
+              <label for="date-min">Fecha</label>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="table-responsive mt-5">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col" class="align-middle">N°</th>
+                <th scope="col" class="align-middle d-none d-md-table-cell">Proveedor</th>
+                <th scope="col" class="align-middle">Cantidad <br> Equipos</th>
+                <th scope="col" class="align-middle">Fecha</th>
+                <th scope="col" class="align-middle">Total</th>
+                <th scope="col" class="align-middle text-center">Acción</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="align-middle">1</td>
+                <td class="align-middle d-none d-md-table-cell">Carlos</td>
+                <td class="align-middle">10</td>
+                <td class="align-middle">mart 20 feb</td>
+                <td class="align-middle">s/1000</td>
+                <td class="align-middle text-center">
+                  <a [routerLink]="['/buyers/1']"  >
+                    <mdb-icon fas icon="eye"></mdb-icon>
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td class="align-middle">1</td>
+                <td class="align-middle d-none d-md-table-cell">Carlos</td>
+                <td class="align-middle">10</td>
+                <td class="align-middle">mart 20 feb</td>
+                <td class="align-middle">s/1000</td>
+                <td class="align-middle text-center">
+                  <a [routerLink]="['/buyers/1']"  >
+                    <mdb-icon fas icon="eye"></mdb-icon>
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td class="align-middle">1</td>
+                <td class="align-middle d-none d-md-table-cell">Carlos</td>
+                <td class="align-middle">10</td>
+                <td class="align-middle">mart 20 feb</td>
+                <td class="align-middle">s/1000</td>
+                <td class="align-middle text-center">
+                  <a [routerLink]="['/buyers/1']"  >
+                    <mdb-icon fas icon="eye"></mdb-icon>
+                  </a>
+                </td>
+              </tr>
+              
+              <tr>
+                <td class="align-middle">1</td>
+                <td class="align-middle d-none d-md-table-cell">Carlos</td>
+                <td class="align-middle">10</td>
+                <td class="align-middle">mart 20 feb</td>
+                <td class="align-middle">s/1000</td>
+                <td class="align-middle text-center">
+                  <a [routerLink]="['/buyers/1']"  >
+                    <mdb-icon fas icon="eye"></mdb-icon>
+                  </a>
+                </td>
+              </tr>
+
+            </tbody>
+          </table>
+
+          <nav aria-label="Page navigation example" class="d-flex justify-content-center mt-3">
+            <ul class="pagination">
+              <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+              <li class="page-item"><a class="page-link" href="#">1</a></li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item"><a class="page-link" href="#">Next</a></li>
+            </ul>
+          </nav>
+          
+        </div>
+      
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<app-modal-view-buy></app-modal-view-buy>
+

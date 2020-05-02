@@ -1,0 +1,287 @@
+<!-- Formulario para comprar -->
+<section class="container-fluid">
+    <div class="row">
+      <div class="card col-12 p-0">
+        <div class="card-body">
+
+          <div class="row">
+            <div class="col-sm-12">
+              <h3 class="card-title">Ver compras</h3>
+            </div>
+          </div>
+
+
+          <div class="row">
+
+            <div class="col-md-3">
+              <div class="md-form">
+                <input type="text" id="model-buyer" class="form-control" mdbInput>
+                <label for="model-buyer">Modelo</label>
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="md-form">
+                <input type="number" id="price-buyer" class="form-control" mdbInput>
+                <label for="price-buyer">Precio compra</label>
+              </div>
+            </div>
+
+            <div class="col-md-2 d-flex align-items-center">
+              <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="detail-buyer">
+                <label class="form-check-label" for="detail-buyer">Detalle</label>
+              </div>
+            </div>
+
+            <div class="col-md-2 d-flex align-items-center text-center mt-3 mt-md-0">
+              <a class="btn btn-primary btn-block"><i class="fas fa-plus mr-2"></i>Agregar</a>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tabla Lista de compras -->
+  <section class="container-fluid">
+    <div class="row">
+
+      <div class="card col-12 p-0">
+
+        <div class="card-body">
+          <div id="table" class="table-editable">
+
+            <div class="col-12 px-0 pb-2">
+              <h5>Lista compra 1</h5>
+            </div>
+
+            <div class="table-responsive">
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th scope="col" class="align-middle">#</th>
+                    <th scope="col" class="align-middle">Marca <br> Modelo</th>
+                    <th scope="col" class="align-middle">Detalle</th>
+                    <th scope="col" class="align-middle">Precio</th>
+                    <th scope="col" class="align-middle">Acción</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="align-middle">1</td>
+                    <td class="align-middle">A10</td>
+                    <td class="align-middle">x</td>
+                    <td class="align-middle">s/100</td>
+                    <td class="align-middle">
+                      <a href="#" class=""><i class="fas fa-pencil-alt mr-4"></i></a>
+                      <a href="#" class=""><i class="far fa-trash-alt"></i></a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="align-middle">2</td>
+                    <td class="align-middle">S10 plus</td>
+                    <td class="align-middle">x</td>
+                    <td class="align-middle">s/500</td>
+                    <td class="align-middle">
+                      <a href="#" class=""><i class="fas fa-pencil-alt mr-4"></i></a>
+                      <a href="#" class=""><i class="far fa-trash-alt"></i></a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="align-middle">3</td>
+                    <td class="align-middle">Moto c</td>
+                    <td class="align-middle">x</td>
+                    <td class="align-middle">s/100</td>
+                    <td class="align-middle">
+                      <a href="#"><i class="fas fa-pencil-alt mr-4"></i></a>
+                      <a href="#"><i class="far fa-trash-alt"></i></a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="align-middle">4</td>
+                    <td class="align-middle">Y7 - 18</td>
+                    <td class="align-middle"></td>
+                    <td class="align-middle">s/150</td>
+                    <td class="align-middle">
+                      <a href="#"><i class="fas fa-pencil-alt mr-4"></i></a>
+                      <a href="#"><i class="far fa-trash-alt"></i></a>
+                    </td>
+                  </tr>
+                  <tr class="table-buyer_row_total">
+                    <td></td>
+                    <td></td>
+                    <td class="font-weight-bold">Total</td>
+                    <td class="font-weight-bold">s/1500<td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <div class="col-md-2 mt-4 mt-md-0 p-0 text-center float-right ">
+                <button type="button" class="btn btn-success btn-block" data-toggle="modal" data-target="#exampleModalCenter">
+                  <i class="far fa-money-bill-alt mr-2" data-target="#exampleModalCenter"></i>
+                  Pagar
+                </button>
+              </div>
+              <!-- <div class="col-md-2 mt-4 mt-md-0 p-0 text-center float-right ">
+                <button type="button" class="btn btn-success btn-block" data-toggle="modal" data-target="#exampleModalCenter">
+                  <i class="far fa-money-bill-alt mr-2" data-target="#exampleModalCenter"></i>
+                  Pagar
+                </button>
+              </div> -->
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal proveedor -->
+  <!-- <app-modal-add-provider></app-modal-add-provider> -->
+
+  import { Component, OnInit } from '@angular/core';
+
+import { CreateBuy } from '../../../models/buys/create-buy';
+import { FormBuilder, FormGroup, Validators} from '@angular/forms';
+
+import { Buyer } from "../../../models/buyers/buyer";
+
+
+@Component({
+  selector: 'app-create-buy',
+  templateUrl: './create-buy.component.html',
+  styleUrls: ['./create-buy.component.scss']
+})
+export class CreateBuyComponent implements OnInit {
+
+  formBuyer: FormGroup ;
+  constructor(private formBuilder: FormBuilder) {
+
+    this.formBuyer = this.formBuilder.group({
+      id:[''],
+      model: ['', [Validators.required]],
+      price_buy: [ '', [Validators.required]],
+      detail: [false]
+    });
+
+  }
+  buyer: Buyer[] = [];
+
+  phoneTemp: CreateBuy = new CreateBuy();
+  phoneTempModal: CreateBuy = new CreateBuy();
+
+  detailBuy = false;
+  detailBuyModal = false;
+
+  totalBuy = 0;
+  id = 0;
+  toggleBuy = false;
+  toggleInputInvalid1 = false;
+  toggleInputInvalid2 = false;
+  toggleFormBuy = false;
+
+  addItemBuyer() {
+    if(this.formBuyer.get('model').errors){
+      this.toggleInputInvalid1 = true;
+      setTimeout( () => {this.toggleInputInvalid1 = false; }, 2000);
+      return;
+    }
+    if(this.formBuyer.get('price_buy').errors){
+      this.toggleInputInvalid2 = true;
+      setTimeout( () => {this.toggleInputInvalid2 = false; }, 2000);
+      return;
+    }
+
+    this.formBuyer.patchValue({
+      id: this.buyer.length + 1
+    });
+    this.buyer.push(this.formBuyer.value);
+
+    this.cleanFormBuy();
+    this.totalBuyer();
+    this.showForm();
+    this.toggleHeader();
+    this.cleanFormBuy();
+    console.log(this.buyer);
+    console.log(this.formBuyer.value);
+  }
+
+  ngOnInit(): void {
+  }
+
+  get model(){
+    return this.formBuyer.get('model');
+  }
+
+
+  toggleHeader() {
+    if (this.buyer.length > 0) {
+      this.toggleBuy = true;
+    }
+    if (this.buyer.length === 0) {
+      this.toggleBuy = false;
+    }
+  }
+
+  showForm() {
+    window.setTimeout( () => {
+        window.scrollTo(0, document.body.scrollHeight);
+    }, 10);
+  }
+
+  editItemBuy(phone: CreateBuy) {
+    console.log(phone);
+    this.formBuyer.patchValue({
+      id: '',
+      model: phone.model,
+      price_buy: phone.price_buy,
+      detailBuy: phone.detail
+    });
+    // this.detailBuyModal = phone.detail;
+  }
+
+  updateItemBuyModal() {
+    this.phoneTemp = this.phoneTempModal;
+    this.phoneTemp.detail = this.detailBuyModal;
+    this.detailBuy = this.detailBuyModal;
+
+    this.totalBuyer();
+
+    this.phoneTemp = new CreateBuy();
+  }
+
+  deleteItemBuy() {
+    // filter(x => x != this.phoneTempModal) => filtra y guarda todo lo que no sea igual a "this.phoneTempModal"
+    console.log(this.formBuyer.value);
+    console.log(this.buyer);
+    this.buyer = this.buyer.filter(x => x !== this.formBuyer.value);
+    console.log(this.buyer);
+    this.totalBuyer();
+
+    this.toggleHeader();
+  }
+
+  cancelBuyModal() {
+    this.phoneTemp = new CreateBuy();
+  }
+
+  totalBuyer() {
+    this.totalBuy = 0;
+    this.buyer.forEach(phone => {
+      this.totalBuy +=  phone.price_buy;
+    });
+  }
+
+  cleanFormBuy(){
+    this.formBuyer.patchValue({
+      model: '',
+      price_buy: '',
+      detailBuy: false
+    });
+  }
+
+}

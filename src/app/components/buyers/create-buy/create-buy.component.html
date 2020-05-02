@@ -1,145 +1,184 @@
-<!-- Formulario para comprar -->
-<section class="container-fluid">
-  <div class="row">
-    <div class="card col-12 p-0">
-      <div class="card-body">
+<div class="sticky-top">
+  <!-- NAVBAR -->
+  <nav class="nav navbar-dark bg-primary justify-content-between content-create-nav">
+    <a class="nav-link" >
+      <i class="fas fa-arrow-left"></i>
+    </a>
+    <h5 class="nav-link title-general">
+      Agregar compra
+    </h5>
+    <a class="nav-link" data-widget="pushmenu" href="#" role="button">
+      <i class="fas fa-ellipsis-v"></i>
+    </a>
+  </nav>
+  <!-- ------------------------------- -->
 
-        <div class="row">
-          <div class="col-sm-12">
-            <h3 class="card-title">Ver compras</h3>
-          </div>
+  <div class="container content-create-title padding-all">
+    <!-- LISTA Y TOTAL -->
+    <div class="row content-create-header p-0">
+      <div class="col-6 text-left">
+        <h4>Lista de compra 1 </h4>
+      </div>
+      <div class="col-6 text-right">
+        <h4 class="pr-4">Total: s./ 3000.00</h4>
+      </div>
+    </div>
+  <!-- ------------------------------- -->
+
+    <!-- CABECERA DE CARD -->
+    <div class="row content-create-header">
+      <div class="col-3">#</div>
+      <div class="col-4">MODELO</div>
+      <div class="col-2">DETALLE</div>
+      <div class="col-3 text-left">PRECIO</div>
+    </div>
+    <!-- ------------------------------- -->
+
+  </div>
+
+</div>
+
+
+
+<div class="container content-create">
+
+<!-- CARD PARA CADA CELULAR DE LA LISTA -->
+  <div class="card pointer" data-toggle="modal" data-target="#editItemBuyModal"
+  *ngFor="let mobil of newBuyerArray; index as i" (click)="editMobil(mobil)">
+    <div class="card-body p-0">
+      <div class="row content-create-card">
+        <div class="col-3 p-0">{{i+1}}</div>
+        <div class="col-4">{{mobil.model}}</div>
+        <div class="col-2">
+          <i class="fas fa-check" *ngIf="mobil.detail"></i>
         </div>
-
-        
-        <div class="row">
-
-          <div class="col-md-3">
-            <div class="md-form">
-              <input type="text" id="model-buyer" class="form-control" mdbInput>
-              <label for="model-buyer">Modelo</label>
-            </div>
-          </div>
-
-          <div class="col-md-3">
-            <div class="md-form">
-              <input type="number" id="price-buyer" class="form-control" mdbInput>
-              <label for="price-buyer">Precio compra</label>
-            </div>
-          </div>
-
-          <div class="col-md-2 d-flex align-items-center">
-            <div class="form-group form-check">
-              <input type="checkbox" class="form-check-input" id="detail-buyer">
-              <label class="form-check-label" for="detail-buyer">Detalle</label>
-            </div>
-          </div>
-
-          <div class="col-md-2 d-flex align-items-center text-center mt-3 mt-md-0">
-            <a class="btn btn-primary btn-block"><i class="fas fa-plus mr-2"></i>Agregar</a>
-          </div>
-
-        </div>
-
+        <div class="col-3 text-left p-0">{{mobil.price_buy}}</div>
       </div>
     </div>
   </div>
-</section>
+  <!-- ------------------------------- -->
 
-<!-- Tabla Lista de compras -->
-<section class="container-fluid">
-  <div class="row">
 
-    <div class="card col-12 p-0">
-
-      <div class="card-body">
-        <div id="table" class="table-editable">
-
-          <div class="col-12 px-0 pb-2">
-            <h5>Lista compra 1</h5>
-          </div>
-
-          <div class="table-responsive">
-            <table class="table table-striped">
-              <thead>
-                <tr>
-                  <th scope="col" class="align-middle">#</th>
-                  <th scope="col" class="align-middle">Marca <br> Modelo</th>
-                  <th scope="col" class="align-middle">Detalle</th>
-                  <th scope="col" class="align-middle">Precio</th>
-                  <th scope="col" class="align-middle">Acción</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td class="align-middle">1</td>
-                  <td class="align-middle">A10</td>
-                  <td class="align-middle">x</td>
-                  <td class="align-middle">s/100</td>
-                  <td class="align-middle">
-                    <a href="#" class=""><i class="fas fa-pencil-alt mr-4"></i></a>
-                    <a href="#" class=""><i class="far fa-trash-alt"></i></a>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="align-middle">2</td>
-                  <td class="align-middle">S10 plus</td>
-                  <td class="align-middle">x</td>
-                  <td class="align-middle">s/500</td>
-                  <td class="align-middle">
-                    <a href="#" class=""><i class="fas fa-pencil-alt mr-4"></i></a>
-                    <a href="#" class=""><i class="far fa-trash-alt"></i></a>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="align-middle">3</td>
-                  <td class="align-middle">Moto c</td>
-                  <td class="align-middle">x</td>
-                  <td class="align-middle">s/100</td>
-                  <td class="align-middle">
-                    <a href="#"><i class="fas fa-pencil-alt mr-4"></i></a>
-                    <a href="#"><i class="far fa-trash-alt"></i></a>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="align-middle">4</td>
-                  <td class="align-middle">Y7 - 18</td>
-                  <td class="align-middle"></td>
-                  <td class="align-middle">s/150</td>
-                  <td class="align-middle">
-                    <a href="#"><i class="fas fa-pencil-alt mr-4"></i></a>
-                    <a href="#"><i class="far fa-trash-alt"></i></a>
-                  </td>
-                </tr>
-                <tr class="table-buyer_row_total">
-                  <td></td>
-                  <td></td>
-                  <td class="font-weight-bold">Total</td>
-                  <td class="font-weight-bold">s/1500<td>
-                </tr>
-              </tbody>
-            </table>
-
-            <div class="col-md-2 mt-4 mt-md-0 p-0 text-center float-right ">
-              <button type="button" class="btn btn-success btn-block" data-toggle="modal" data-target="#exampleModalCenter">
-                <i class="far fa-money-bill-alt mr-2" data-target="#exampleModalCenter"></i>
-                Pagar
-              </button>
+  <!-- FORMULARIO -->
+  <div class="card content-create-form d-none"
+  [class.d-none]="!toggleForm">
+    <div class="card-body p-0">
+      <form [formGroup]="newBuyerForm">
+        <div class="row">
+            <div class="col-sm-6">
+              <div class="md-form">
+                <input type="text" class="form-control" mdbInput placeholder="Modelo" tabindex="1"
+                formControlName="model">
+              </div>
             </div>
-            <!-- <div class="col-md-2 mt-4 mt-md-0 p-0 text-center float-right ">
-              <button type="button" class="btn btn-success btn-block" data-toggle="modal" data-target="#exampleModalCenter">
-                <i class="far fa-money-bill-alt mr-2" data-target="#exampleModalCenter"></i>
-                Pagar
-              </button>
-            </div> -->
+            <div class=" col-8 col-sm-6">
+              <div class="md-form">
+                <input type="number" class="form-control" mdbInput placeholder="Precio compra" tabindex="2"
+                formControlName="price_buy">
+              </div>
+            </div>
+            <div class="col-4 col-sm-6 d-flex align-items-center p-0">
+              <mdb-checkbox [default]="true" formControlName="detail">
+                Detalle
+              </mdb-checkbox>
+            </div>
+        </div>
+      </form>
 
-          </div>
+    </div>
+  </div>
+  <!-- ------------------------------- -->
 
+
+  <!-- BOTONES "Check, Close" -->
+  <div class="card fixed-bottom sticky-top m-0 p-0 content-create-footer d-none" [class.d-none]="!toggleForm" >
+    <div class="card-body p-0">
+      <div class="row ">
+        <div class="col-8 offset-2 d-flex justify-content-between">
+          <a (click)="toggleForm = !toggleForm"><i class="fas fa-times"></i></a>
+          <a (click)="toggleForm = !toggleForm; addMobil(newBuyerForm)">
+            <i class="fas fa-check"></i>
+          </a>
         </div>
       </div>
     </div>
   </div>
-</section>
+  <!-- ------------------------------- -->
 
-<!-- Modal proveedor -->
-<!-- <app-modal-add-provider></app-modal-add-provider> -->
+  <!-- BOTON "Añadir Celular" -->
+  <div class="card fixed-bottom sticky-top content-create-footer pointer d-none" tabindex="0" [class.d-none]="toggleForm"
+  (click)="toggleForm = !toggleForm; showForm()">
+    <div class="card-body p-0">
+      <div class="row ">
+        <div class="col-12">
+          <i class="fas fa-plus-circle"></i>
+          Añadir celular
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ------------------------------- -->
+
+
+</div>
+
+<!-- MODAL EDITAR CELULAR EN LISTA COMPRA -->
+<div class="modal" role="dialog" id="editItemBuyModal">
+  <div class="modal-dialog" role="document">
+    <form [formGroup]="newBuyerForm">
+
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="editItemBuyModal">N° 1 - Samsun A10</h5>
+          <div class="mr-5">
+            <a  data-dismiss="modal" (click)="deleteMobil(newBuyerForm.value)">
+              <i class="far fa-trash-alt"></i></a>
+            </div>
+        </div>
+        <div class="modal-body">
+
+            <div class="row">
+                <div class="col-sm-5">
+                  <div class="md-form">
+                    <input type="text" class="form-control" mdbInput  tabindex="1" id="model"
+                    formControlName="model">
+                    <label for="model">Modelo</label>
+                  </div>
+                </div>
+                <div class=" col-8 col-sm-5">
+                  <div class="md-form">
+                    <input type="number" class="form-control" mdbInput id="price_buy" tabindex="2"
+                    formControlName="price_buy">
+                    <label for="price_buy">Precio compra</label>
+                  </div>
+                </div>
+                <div class="col-4 col-sm-2 d-flex align-items-center justify-content-center p-0">
+                  <mdb-checkbox [default]="true"
+                  formControlName="detail">
+                    Detalle
+                  </mdb-checkbox>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal-footer">
+          <div class="container">
+            <div class="row">
+              <div class="col-8 offset-2 d-flex justify-content-around" >
+                <button class="btn btn-danger" data-dismiss="modal" (click)="cancelUpdateMobil()">Cancelar</button>
+                <button class="btn btn-primary" data-dismiss="modal" (click)="updateMobil(newBuyerForm.value)">Guardar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+  </form>
+
+  </div>
+</div>
+  <!-- ------------------------------- -->
+
+
+
 

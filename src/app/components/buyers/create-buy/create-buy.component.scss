@@ -1,6 +1,136 @@
-.fa-money-bill-alt{
-    font-size: 25px;
+.content-create-nav .title-general{
+    margin: 0;
+    font-weight: bold;
 }
-.table-buyer_row_total{
-    background: #fff !important;
+
+.content-create{
+    padding: 0 20px;
 }
+.padding-all{
+    padding: 0 20px;
+}
+
+.content-create-title{
+    padding-top: 10px;
+    background: #f4f6f9;
+}
+
+.content-create-title h4{
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.content-create-header, .content-create-card{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.content-create-card, .content-create-header div {
+    text-align: center;
+}
+
+.content-create-header{
+    font-size: 11px;
+    padding: 20px 0 18px 0px;
+}
+
+.content-create .card{
+    margin-bottom: 8px;
+    padding: 0;
+}
+
+.content-create-card{
+    height: 57px;
+}
+
+
+// BOTON PEGADO
+.pointer{
+    cursor: pointer;
+}
+
+.content-create-footer{
+  margin: 0 !important;
+  padding: 0 !important;
+}
+.content-create-footer .row{
+    height: 40px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #00C851;
+
+}
+
+.content-create-footer .card-body{
+    background: #eeeeee;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+
+    // Lista compra 16px
+
+    // Card  Alto 55px
+
+    // espacio al lado 20px
+
+    // de tarjeta en tarjeta 8px
+
+    // cabcera a lista 30px
+    // de tajeta a cabecera 18px
+.content-create-form{
+    height: 100px;
+    padding: 0 25px !important;
+}
+
+.content-create-form .md-form{
+    margin: 0;
+    caret-color: #00C851;
+}
+
+.content-create-form .md-form input:focus{
+    box-shadow: 0 1px 0 0 #00C851;
+    border-bottom: 1px solid #00C851;
+}
+
+
+// INPUT => estilos generales para cuando seleccionas de una lista en CACHE
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+    -webkit-text-fill-color: black;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+
+
+
+// MODAL
+#editItemBuyModal .modal-header > div{
+    font-size: 20px;
+    color: red;
+}
+
+.invalid {
+  border: 2px solid red;
+  border-radius: 30px;
+  transition: border-color .5s ease-in-out;
+  border-bottom: none;
+}
+
+.invalid2{
+  border-radius: 30px !important;
+  border: 2px solid red !important;
+  transition: border-color .5s ease-in-out !important;
+  border-left: none !important;
+  border-right: none !important;
+  border-top: none !important;
+}
+

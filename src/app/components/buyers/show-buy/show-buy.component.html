@@ -1,4 +1,4 @@
-<div class="container-fluid header-content">
+<div class="container-fluid sticky-top">
     <div class="row">
         <div class="card col-md-12 pt-2">
             <div class="row d-flex justify-content-center">
@@ -32,193 +32,54 @@
     </div>
 </div>
 
-
-<div class="container-fluid body-content">
+<div class="container-fluid">
     <div class="row">
         <div class="card col-md-12">
-
             <div class="row d-flex justify-content-center">
-
                 <div class="col-md-6">
                     <div class="table-responsive">
-                        <table class="table table-sm table-striped" mdbTable mdbTableScroll scrollY="false"
+                        <table class="table table-sm table-striped table-show-buy table-hover"  mdbTable mdbTableScroll scrollY="false"
                             maxHeight="">
-
                             <thead>
                                 <tr>
                                     <th scope="col" class="align-middle table_number">#</th>
-                                    <th scope="col" class="align-middle">Marca<br>Modelo</th>
+                                    <th scope="col" class="align-middle model">Marca<br>Modelo</th>
                                     <th scope="col" class="align-middle table_detail">Detalle</th>
-                                    <th scope="col" class="align-middle">Precio</th>
+                                    <th scope="col" class="align-middle">Precio<br>compra</th>
                                     <th scope="col" class="align-middle text-center">Acción</th>
                                 </tr>
                             </thead>
-
+                            
                             <tbody>
-                                <tr>
-                                    <td scope="col" class="align-middle">1</td>
-                                    <td scope="col" class="align-middle">A10</td>
-                                    <td scope="col" class="align-middle">x</td>
-                                    <td scope="col" class="align-middle">s/100</td>
-                                    <td class="align-middle text-center">
-                                        <a [routerLink]="['/buyers/1/1']" routerLinkActive="router-link-active">
-                                            <i class="fas fa-edit"></i>
-                                        </a>
+                                <tr *ngFor="let mobile of mobileArray" data-toggle="modal" data-target="#modal-repair">
+                                    <td scope="col" class="align-middle"> {{ mobile.id}} </td>
+                                    <td scope="col" class="align-middle model">
+                                        {{ mobile.brand }} {{ mobile.model}}
+                                        <p>cod: {{mobile.id}} </p>
                                     </td>
-                                </tr>
-                                <tr>
-                                    <td scope="col" class="align-middle">2</td>
-                                    <td scope="col" class="align-middle">A10</td>
-                                    <td scope="col" class="align-middle">x</td>
-                                    <td scope="col" class="align-middle">s/100</td>
+                                    <td scope="col" class="align-middle" *ngIf="mobile.detail; else empty" ><i class="fas fa-check"></i></td>
+                                        <ng-template #empty> <td></td> </ng-template>
+                                    <td scope="col" class="align-middle"> {{ mobile.price_buy }} </td>
                                     <td class="align-middle text-center">
-                                        <a data-toggle="modal" data-target="#modalPrueba">
-                                            <i class="fas fa-edit"></i>
-                                        </a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td scope="col" class="align-middle">3</td>
-                                    <td scope="col" class="align-middle">A10</td>
-                                    <td scope="col" class="align-middle">x</td>
-                                    <td scope="col" class="align-middle">s/100</td>
-                                    <td class="align-middle text-center">
-                                        <a><i class="fas fa-edit"></i></a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td scope="col" class="align-middle">4</td>
-                                    <td scope="col" class="align-middle">A10</td>
-                                    <td scope="col" class="align-middle">x</td>
-                                    <td scope="col" class="align-middle">s/100</td>
-                                    <td class="align-middle text-center">
-                                        <a><i class="fas fa-edit"></i></a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td scope="col" class="align-middle">5</td>
-                                    <td scope="col" class="align-middle">A10</td>
-                                    <td scope="col" class="align-middle">x</td>
-                                    <td scope="col" class="align-middle">s/100</td>
-                                    <td class="align-middle text-center">
-                                        <a><i class="fas fa-edit"></i></a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td scope="col" class="align-middle">6</td>
-                                    <td scope="col" class="align-middle">A10</td>
-                                    <td scope="col" class="align-middle">x</td>
-                                    <td scope="col" class="align-middle">s/100</td>
-                                    <td class="align-middle text-center">
-                                        <a><i class="fas fa-edit"></i></a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td scope="col" class="align-middle">7</td>
-                                    <td scope="col" class="align-middle">A10</td>
-                                    <td scope="col" class="align-middle">x</td>
-                                    <td scope="col" class="align-middle">s/100</td>
-                                    <td class="align-middle text-center">
-                                        <a><i class="fas fa-edit"></i></a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td scope="col" class="align-middle">8</td>
-                                    <td scope="col" class="align-middle">A10</td>
-                                    <td scope="col" class="align-middle">x</td>
-                                    <td scope="col" class="align-middle">s/100</td>
-                                    <td class="align-middle text-center">
-                                        <a><i class="fas fa-edit"></i></a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td scope="col" class="align-middle">9</td>
-                                    <td scope="col" class="align-middle">A10</td>
-                                    <td scope="col" class="align-middle">x</td>
-                                    <td scope="col" class="align-middle">s/100</td>
-                                    <td class="align-middle text-center">
-                                        <a><i class="fas fa-edit"></i></a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td scope="col" class="align-middle">10</td>
-                                    <td scope="col" class="align-middle">A10</td>
-                                    <td scope="col" class="align-middle">x</td>
-                                    <td scope="col" class="align-middle">s/100</td>
-                                    <td class="align-middle text-center">
-                                        <a><i class="fas fa-edit"></i></a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td scope="col" class="align-middle">11</td>
-                                    <td scope="col" class="align-middle">A10</td>
-                                    <td scope="col" class="align-middle">x</td>
-                                    <td scope="col" class="align-middle">s/100</td>
-                                    <td class="align-middle text-center">
-                                        <a><i class="fas fa-edit"></i></a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td scope="col" class="align-middle">12</td>
-                                    <td scope="col" class="align-middle">A10</td>
-                                    <td scope="col" class="align-middle">x</td>
-                                    <td scope="col" class="align-middle">s/100</td>
-                                    <td class="align-middle text-center">
-                                        <a><i class="fas fa-edit"></i></a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td scope="col" class="align-middle">13</td>
-                                    <td scope="col" class="align-middle">A10</td>
-                                    <td scope="col" class="align-middle">x</td>
-                                    <td scope="col" class="align-middle">s/100</td>
-                                    <td class="align-middle text-center">
-                                        <a><i class="fas fa-edit"></i></a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td scope="col" class="align-middle">14</td>
-                                    <td scope="col" class="align-middle">A10</td>
-                                    <td scope="col" class="align-middle">x</td>
-                                    <td scope="col" class="align-middle">s/100</td>
-                                    <td class="align-middle text-center">
-                                        <a><i class="fas fa-edit"></i></a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td scope="col" class="align-middle">15</td>
-                                    <td scope="col" class="align-middle">A10</td>
-                                    <td scope="col" class="align-middle">x</td>
-                                    <td scope="col" class="align-middle">s/100</td>
-                                    <td class="align-middle text-center">
-                                        <a><i class="fas fa-edit"></i></a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td scope="col" class="align-middle">16</td>
-                                    <td scope="col" class="align-middle">A10</td>
-                                    <td scope="col" class="align-middle">x</td>
-                                    <td scope="col" class="align-middle">s/100</td>
-                                    <td class="align-middle text-center">
-                                        <a><i class="fas fa-edit"></i></a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td scope="col" class="align-middle">17</td>
-                                    <td scope="col" class="align-middle">A10</td>
-                                    <td scope="col" class="align-middle">x</td>
-                                    <td scope="col" class="align-middle">s/100</td>
-                                    <td class="align-middle text-center">
-                                        <a><i class="fas fa-edit"></i></a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td scope="col" class="align-middle">18</td>
-                                    <td scope="col" class="align-middle">Ultimo</td>
-                                    <td scope="col" class="align-middle">x</td>
-                                    <td scope="col" class="align-middle">s/100</td>
-                                    <td class="align-middle text-center">
-                                        <a><i class="fas fa-edit"></i></a>
+                                        <div class="dropdown">
+                                            <a routerLinkActive="router-link-active" data-toggle="dropdown" aria-haspopup="true">
+                                                <i class="fas fa-ellipsis-v"></i>
+                                            </a>
+                                            <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                                                <button class="dropdown-item" type="button">
+                                                    <i class="far fa-eye"></i>
+                                                    Ver
+                                                </button>
+                                                <button class="dropdown-item" type="button" [routerLink]="['/buyers/1/1']">
+                                                    <i class="fas fa-pencil-alt"></i>
+                                                    Editar
+                                                </button>
+                                                <button class="dropdown-item" type="button">
+                                                    <i class="far fa-trash-alt"></i>
+                                                    Eliminar
+                                                </button>
+                                            </div>
+                                        </div>
                                     </td>
                                 </tr>
                             </tbody>
@@ -231,7 +92,7 @@
 </div>
 
 
-<div class="container-fluid footer-content">
+<div class="container-fluid fixed-bottom sticky-top">
     <div class="row">
         <div class="card col-md-12 mb-0">
             <div class="row">
@@ -241,11 +102,100 @@
                             <a [routerLink]="['/buyers']"> Atras</a>
                             <h4>Lista 1 @show-list</h4>
                             <div>
-                                <button class="btn btn-primary">Guardar</button>
+                                <!-- <button class="btn btn-primary">Guardar</button> -->
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="modal" role="dialog" id="modal-repair">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <label>Reparación</label>
+                    </div>
+                    
+                </div>
+                <div class="btn-close-modal">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                </div>
+
+                <div class="row">
+                    <div class="col-8 ">
+                        <div class="md-form input-form-modal">
+                            <input type="text" id="type-repair" class="form-control " mdbInput value="Cambio táctil">
+                            <label for="type-repair">Tipo reparación</label>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="md-form input-form-modal">
+                            <input type="text" id="preice-repair" class="form-control" mdbInput value="70">
+                            <label for="preice-repair">Precio</label>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <div class="row">
+                    <div class="form-group col-8 select-form-modal">
+                        <label for="technical">Técnico</label>
+                        <select class="form-control" id="technical">
+                            <option>Dante</option>
+                            <option>Chulls</option>
+                        </select>
+                    </div>
+    
+                    <div class="col-4 d-flex align-items-center">
+                        <button class="btn-sm btn-primary">Agregar</button>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="table-responsive-sm mt-2 col-12">
+                        <table mdbTable mdbTableScroll scrollY="false" maxHeight="">
+                          <thead>
+                            <tr>
+                              <th scope="col" class="align-middle text-center">Reparación</th>
+                              <th scope="col" class="align-middle">Precio</th>
+                              <th scope="col" class="align-middle">Técnico</th>
+                              <th scope="col" class="align-middle">Fecha</th>
+                              <th scope="col" class="align-middle text-center">Acción</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td class="align-middle">Cambio tactil</td>
+                              <td class="align-middle">s/70</td>
+                              <td class="align-middle">Dante</td>
+                              <td class="align-middle">02/02</td>
+                              <td class="align-middle text-center">
+                                <a [routerLink]="['/buyers/1/1']"  >
+                                    <i class="fas fa-pencil-alt"></i>
+                                </a>
+                              </td>
+                            </tr>
+                          
+              
+                          </tbody>
+                        </table>
+                      </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary">Guardar</button>
+                  </div>
             </div>
         </div>
     </div>

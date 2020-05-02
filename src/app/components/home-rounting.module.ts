@@ -16,9 +16,9 @@ const routes: Routes =
         path:'', component: HomeComponent,children:
         [
             {path: 'buyers', component: IndexBuyComponent},
-            {path: 'buyers/1', component: ShowBuyComponent},
-            {path: 'buyers/1/1', component: EditItemBuyComponent},
             {path: 'buyers/create', component: CreateBuyComponent},
+            {path: 'buyers/:id', component: ShowBuyComponent},
+            {path: 'buyers/1/1', component: EditItemBuyComponent},
             
             
             {path: 'sellers', component: IndexSellerComponent},

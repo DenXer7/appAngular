@@ -1,14 +1,27 @@
-<div class="container-fluid header-content">
+<div class="container-fluid header-content sticky-top">
     <div class="row">
-        <div class="card col-md-12 pt-3">
+        <div class="card col-md-12 content-card">
             <div class="row d-flex align-items-center">
-
+                <div class="col d-flex justify-content-between content-card-direction">
+                    <div class="text-center">
+                        <a [routerLink]="['/buyers/1']" class="" >
+                            <i class="fas fa-arrow-circle-left"></i>
+                            Atras
+                        </a>
+                    </div>
+                    <div class="text-center">
+                        <a [routerLink]="['/buyers/1/1']">
+                            <i class="fas fa-arrow-circle-right"></i>   
+                            Siguiente<br>celular
+                        </a>
+                    </div>
+                </div>
                 <div class="col">
-                    <h3>Samsung A10</h3>
+                    <h5>Samsung A10</h5>
                     <p>Codigo: 7</p>
                 </div>
 
-                <div class="col text-center">
+                <div class="col">
                     <h5>costo</h5>
                     <p><b>s/ 120.00</b></p>
                 </div>
@@ -105,24 +118,18 @@
 </div>
 
 
-<div class="container-fluid footer-content submenu-fixed">
+<div class="container-fluid fixed-bottom sticky-top">
     <div class="row">
         <div class="card col-sm-12 mb-0">
             <div class="row d-flex justify-content-between">
-                <div class="col text-center submenu-fixed-item">
-                    <a [routerLink]="['/buyers/1']" class="" >
-                        <i class="fas fa-arrow-left"></i>
-                        Atras
+                
+                <div class="col text-center submenu-fixed-item ">
+                    <a data-toggle="modal" data-target="#modal-repair">
+                        <i class="fas fa-cog"></i>
+                        Mantenimiento
                     </a>
                 </div>
-
-                <div class="col text-center submenu-fixed-item">
-                    <a [routerLink]="['/buyers/1/1']"  >
-                        <i class="far fa-save"></i>
-                        Guardar
-                    </a>
-                </div>
-
+                
                 <div class="col text-center submenu-fixed-item">
                     <div class="navbar-nav">
                         <a data-widget="pushmenu" href="#" role="button">
@@ -132,16 +139,10 @@
                     </div>
                 </div>
                 
-                <div class="col text-center submenu-fixed-item ">
-                    <a data-toggle="modal" data-target="#modal-repair">
-                        <i class="fas fa-user-cog"></i>
-                        Técnico
-                    </a>
-                </div>
                 <div class="col text-center submenu-fixed-item">
-                    <a [routerLink]="['/buyers/1/1']">
-                        <i class="fas fa-arrow-right"></i>
-                        Siguiente
+                    <a [routerLink]="['/buyers/1/1']"  >
+                        <i class="far fa-save"></i>
+                        Guardar
                     </a>
                 </div>
             </div>
@@ -159,8 +160,6 @@
                 <div class="row">
                     <div class="col-12 text-center">
                         <label>Reparación</label>
-                        <!-- <p>Samsung A10</p> -->
-                        <!-- <p>codigo: 7</p> -->
                     </div>
                     
                 </div>
@@ -183,7 +182,6 @@
                             <label for="preice-repair">Precio</label>
                         </div>
                     </div>
-                    
                     
                 </div>
 
@@ -210,7 +208,6 @@
                               <th scope="col" class="align-middle">Precio</th>
                               <th scope="col" class="align-middle">Técnico</th>
                               <th scope="col" class="align-middle">Fecha</th>
-                              <!-- <th scope="col" class="align-middle">Estado</th> -->
                               <th scope="col" class="align-middle text-center">Acción</th>
                             </tr>
                           </thead>
@@ -226,94 +223,7 @@
                                 </a>
                               </td>
                             </tr>
-                            <tr>
-                                <td class="align-middle">Cambio tactil</td>
-                                <td class="align-middle">s/70</td>
-                                <td class="align-middle">Dante</td>
-                                <td class="align-middle">02/02</td>
-                                <td class="align-middle text-center">
-                                  <a [routerLink]="['/buyers/1/1']"  >
-                                      <i class="fas fa-pencil-alt"></i>
-                                  </a>
-                                </td>
-                              </tr>
-                              <tr>
-                                <td class="align-middle">Cambio tactil</td>
-                                <td class="align-middle">s/70</td>
-                                <td class="align-middle">Dante</td>
-                                <td class="align-middle">02/02</td>
-                                <td class="align-middle text-center">
-                                  <a [routerLink]="['/buyers/1/1']"  >
-                                      <i class="fas fa-pencil-alt"></i>
-                                  </a>
-                                </td>
-                              </tr>
-                              <tr>
-                                <td class="align-middle">Cambio tactil</td>
-                                <td class="align-middle">s/70</td>
-                                <td class="align-middle">Dante</td>
-                                <td class="align-middle">02/02</td>
-                                <td class="align-middle text-center">
-                                  <a [routerLink]="['/buyers/1/1']"  >
-                                      <i class="fas fa-pencil-alt"></i>
-                                  </a>
-                                </td>
-                              </tr>
-                              <tr>
-                                <td class="align-middle">Cambio tactil</td>
-                                <td class="align-middle">s/70</td>
-                                <td class="align-middle">Dante</td>
-                                <td class="align-middle">02/02</td>
-                                <td class="align-middle text-center">
-                                  <a [routerLink]="['/buyers/1/1']"  >
-                                      <i class="fas fa-pencil-alt"></i>
-                                  </a>
-                                </td>
-                              </tr>
-                              <tr>
-                                <td class="align-middle">Cambio tactil</td>
-                                <td class="align-middle">s/70</td>
-                                <td class="align-middle">Dante</td>
-                                <td class="align-middle">02/02</td>
-                                <td class="align-middle text-center">
-                                  <a [routerLink]="['/buyers/1/1']"  >
-                                      <i class="fas fa-pencil-alt"></i>
-                                  </a>
-                                </td>
-                              </tr>
-                              <tr>
-                                <td class="align-middle">Cambio tactil</td>
-                                <td class="align-middle">s/70</td>
-                                <td class="align-middle">Dante</td>
-                                <td class="align-middle">02/02</td>
-                                <td class="align-middle text-center">
-                                  <a [routerLink]="['/buyers/1/1']"  >
-                                      <i class="fas fa-pencil-alt"></i>
-                                  </a>
-                                </td>
-                              </tr>
-                              <tr>
-                                <td class="align-middle">Cambio tactil</td>
-                                <td class="align-middle">s/70</td>
-                                <td class="align-middle">Dante</td>
-                                <td class="align-middle">02/02</td>
-                                <td class="align-middle text-center">
-                                  <a [routerLink]="['/buyers/1/1']"  >
-                                      <i class="fas fa-pencil-alt"></i>
-                                  </a>
-                                </td>
-                              </tr>
-                              <tr>
-                                <td class="align-middle">Cambio tactil</td>
-                                <td class="align-middle">s/70</td>
-                                <td class="align-middle">Dante</td>
-                                <td class="align-middle">02/02</td>
-                                <td class="align-middle text-center">
-                                  <a [routerLink]="['/buyers/1/1']"  >
-                                      <i class="fas fa-pencil-alt"></i>
-                                  </a>
-                                </td>
-                              </tr>
+                          
               
                           </tbody>
                         </table>
@@ -321,8 +231,8 @@
                 </div>
 
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary">Guardar</button>
                   </div>
             </div>
         </div>

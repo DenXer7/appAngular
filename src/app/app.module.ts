@@ -1,11 +1,16 @@
-
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { FormsModule } from '@angular/forms';
+//VALIDACIONES DE FORMULARIOS
+import { ReactiveFormsModule } from '@angular/forms';
 
+//SERVICIOS
+import { BuyersService } from "./services/buyers.service";
+import { HttpClientModule } from "@angular/common/http";
+// --------------------------------------------------------
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeRoutingModule } from './components/home-rounting.module';
@@ -49,9 +54,11 @@ import { IndexSellerComponent } from './components/sellers/index-seller/index-se
     MDBBootstrapModule.forRoot(),
     FormsModule,
     AppRoutingModule,
-    HomeRoutingModule
+    HomeRoutingModule,
+    HttpClientModule,
+    ReactiveFormsModule
   ],
-  providers: [],
+  providers: [BuyersService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
