@@ -10,21 +10,22 @@ import { ShowBuyComponent } from './buyers/show-buy/show-buy.component';
 import { EditItemBuyComponent } from './buyers/edit-item-buy/edit-item-buy.component';
 
 
-const routes: Routes = 
+const routes: Routes =
 [
     {
-        path:'', component: HomeComponent,children:
+        path: '', component: HomeComponent, children:
         [
             {path: 'buyers', component: IndexBuyComponent},
             {path: 'buyers/create', component: CreateBuyComponent},
+            {path: 'buyers/:edit/:id', component: CreateBuyComponent},
             {path: 'buyers/:id', component: ShowBuyComponent},
             {path: 'buyers/1/1', component: EditItemBuyComponent},
-            
-            
+
+
             {path: 'sellers', component: IndexSellerComponent},
             {path: 'sellers/create', component  : CreateSellerComponent},
         ]
-    }   
+    }
 ];
 
 @NgModule({
@@ -32,3 +33,7 @@ const routes: Routes =
   exports: [RouterModule]
 })
 export class HomeRoutingModule { }
+
+
+// Caratula
+// Matriz de Proceso

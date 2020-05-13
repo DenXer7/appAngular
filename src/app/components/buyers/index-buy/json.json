@@ -1,0 +1,188 @@
+{
+    "data": [
+        {
+            "buyer_id": 1,
+            "buyer_date": "2020-05-08 04:19:35",
+            "id": 4,
+            "price_buyer": 100,
+            "detail": 1,
+            "model": "a70"
+        },
+        {
+            "buyer_id": 2,
+            "buyer_date": "2020-05-08 04:19:35",
+            "id": 9,
+            "price_buyer": 100,
+            "detail": 0,
+            "model": "s20"
+        },
+        {
+            "buyer_id": 2,
+            "buyer_date": "2020-05-08 04:19:35",
+            "id": 11,
+            "price_buyer": 100,
+            "detail": 1,
+            "model": "s20"
+        },
+        {
+            "buyer_id": 2,
+            "buyer_date": "2020-05-08 04:19:35",
+            "id": 17,
+            "price_buyer": 100,
+            "detail": 0,
+            "model": "a50"
+        },
+        {
+            "buyer_id": 3,
+            "buyer_date": "2020-05-08 04:19:35",
+            "id": 5,
+            "price_buyer": 100,
+            "detail": 0,
+            "model": "a50"
+        },
+        {
+            "buyer_id": 3,
+            "buyer_date": "2020-05-08 04:19:35",
+            "id": 6,
+            "price_buyer": 100,
+            "detail": 0,
+            "model": "a30"
+        },
+        {
+            "buyer_id": 3,
+            "buyer_date": "2020-05-08 04:19:35",
+            "id": 10,
+            "price_buyer": 100,
+            "detail": 0,
+            "model": "s10"
+        },
+        {
+            "buyer_id": 3,
+            "buyer_date": "2020-05-08 04:19:35",
+            "id": 12,
+            "price_buyer": 100,
+            "detail": 0,
+            "model": "a30"
+        },
+        {
+            "buyer_id": 3,
+            "buyer_date": "2020-05-08 04:19:35",
+            "id": 14,
+            "price_buyer": 100,
+            "detail": 1,
+            "model": "s6"
+        },
+        {
+            "buyer_id": 3,
+            "buyer_date": "2020-05-08 04:19:35",
+            "id": 15,
+            "price_buyer": 100,
+            "detail": 0,
+            "model": "a20"
+        },
+        {
+            "buyer_id": 4,
+            "buyer_date": "2020-05-08 04:19:35",
+            "id": 1,
+            "price_buyer": 100,
+            "detail": 0,
+            "model": "J4"
+        },
+        {
+            "buyer_id": 4,
+            "buyer_date": "2020-05-08 04:19:35",
+            "id": 13,
+            "price_buyer": 100,
+            "detail": 1,
+            "model": "mate 8"
+        },
+        {
+            "buyer_id": 4,
+            "buyer_date": "2020-05-08 04:19:35",
+            "id": 16,
+            "price_buyer": 100,
+            "detail": 1,
+            "model": "a40"
+        },
+        {
+            "buyer_id": 4,
+            "buyer_date": "2020-05-08 04:19:35",
+            "id": 18,
+            "price_buyer": 100,
+            "detail": 0,
+            "model": "J4"
+        },
+        {
+            "buyer_id": 4,
+            "buyer_date": "2020-05-08 04:19:35",
+            "id": 19,
+            "price_buyer": 100,
+            "detail": 1,
+            "model": "s7"
+        },
+        {
+            "buyer_id": 5,
+            "buyer_date": "2020-05-08 04:19:35",
+            "id": 2,
+            "price_buyer": 100,
+            "detail": 0,
+            "model": "a10"
+        },
+        {
+            "buyer_id": 5,
+            "buyer_date": "2020-05-08 04:19:35",
+            "id": 7,
+            "price_buyer": 100,
+            "detail": 1,
+            "model": "a10"
+        },
+        {
+            "buyer_id": 6,
+            "buyer_date": "2020-05-08 04:19:35",
+            "id": 3,
+            "price_buyer": 100,
+            "detail": 1,
+            "model": "J2"
+        },
+        {
+            "buyer_id": 6,
+            "buyer_date": "2020-05-08 04:19:35",
+            "id": 8,
+            "price_buyer": 100,
+            "detail": 0,
+            "model": "s8"
+        },
+        {
+            "buyer_id": 6,
+            "buyer_date": "2020-05-08 04:19:35",
+            "id": 20,
+            "price_buyer": 100,
+            "detail": 1,
+            "model": "a10"
+        },
+        {
+            "buyer_id": 7,
+            "buyer_date": "2020-05-08 04:19:57",
+            "id": 21,
+            "price_buyer": 123,
+            "detail": 0,
+            "model": "asd"
+        },
+        {
+            "buyer_id": 7,
+            "buyer_date": "2020-05-08 04:19:57",
+            "id": 22,
+            "price_buyer": 123,
+            "detail": 0,
+            "model": "asd"
+        },
+        {
+            "buyer_id": 8,
+            "buyer_date": "2020-05-08 04:20:18",
+            "id": 23,
+            "price_buyer": 123,
+            "detail": 0,
+            "model": "asd"
+        }
+    ]
+}

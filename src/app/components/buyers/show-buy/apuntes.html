@@ -1,0 +1,202 @@
+<div class="container-fluid sticky-top">
+  <div class="row">
+      <div class="card col-md-12 pt-2">
+          <div class="row d-flex justify-content-center">
+              <div class="col-md-6">
+                  <div class="row">
+                      <div class="col-md-12 d-flex justify-content-center">
+                          <h5>Total</h5>
+                      </div>
+                  </div>
+                  <div class="row">
+                      <div class="col-12 total_list">
+                          <ul class="d-flex justify-content-between">
+                              <li>
+                                  <p>Equipos</p>
+                                  <p>15</p>
+                              </li>
+                              <li>
+                                  <p>Gasto</p>
+                                  <p>s/2200.00</p>
+                              </li>
+                              <li>
+                                  <p>Compra</p>
+                                  <p>s/2000.00</p>
+                              </li>
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+<div class="container-fluid">
+  <div class="row">
+      <div class="card col-md-12">
+          <div class="row d-flex justify-content-center">
+              <div class="col-md-6">
+                  <div class="table-responsive">
+                      <table class="table table-sm table-striped table-show-buy table-hover"  mdbTable mdbTableScroll scrollY="false"
+                          maxHeight="">
+                          <thead>
+                              <tr>
+                                  <th scope="col" class="align-middle table_number">#</th>
+                                  <th scope="col" class="align-middle model">Marca<br>Modelo</th>
+                                  <th scope="col" class="align-middle table_detail">Detalle</th>
+                                  <th scope="col" class="align-middle">Precio<br>compra</th>
+                                  <th scope="col" class="align-middle text-center">Acción</th>
+                              </tr>
+                          </thead>
+
+                          <tbody>
+                              <tr *ngFor="let mobile of mobileArray" data-toggle="modal" data-target="#modal-repair">
+                                  <td scope="col" class="align-middle"> {{ mobile.id}} </td>
+                                  <td scope="col" class="align-middle model">
+                                      {{ mobile.brand }} {{ mobile.model}}
+                                      <p>cod: {{mobile.id}} </p>
+                                  </td>
+                                  <td scope="col" class="align-middle" *ngIf="mobile.detail; else empty" ><i class="fas fa-check"></i></td>
+                                      <ng-template #empty> <td></td> </ng-template>
+                                  <td scope="col" class="align-middle"> {{ mobile.price_buy }} </td>
+                                  <td class="align-middle text-center">
+                                      <div class="dropdown">
+                                          <a routerLinkActive="router-link-active" data-toggle="dropdown" aria-haspopup="true">
+                                              <i class="fas fa-ellipsis-v"></i>
+                                          </a>
+                                          <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                                              <button class="dropdown-item" type="button">
+                                                  <i class="far fa-eye"></i>
+                                                  Ver
+                                              </button>
+                                              <button class="dropdown-item" type="button" [routerLink]="['/buyers/1/1']">
+                                                  <i class="fas fa-pencil-alt"></i>
+                                                  Editar
+                                              </button>
+                                              <button class="dropdown-item" type="button">
+                                                  <i class="far fa-trash-alt"></i>
+                                                  Eliminar
+                                              </button>
+                                          </div>
+                                      </div>
+                                  </td>
+                              </tr>
+                          </tbody>
+                      </table>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+
+<div class="container-fluid fixed-bottom sticky-top">
+  <div class="row">
+      <div class="card col-md-12 mb-0">
+          <div class="row">
+              <div class="card-body">
+                  <div class="row">
+                      <div class="col-md-12 d-flex justify-content-between align-items-center">
+                          <a [routerLink]="['/buyers']"> Atras</a>
+                          <h4>Lista 1 @show-list</h4>
+                          <div>
+                              <!-- <button class="btn btn-primary">Guardar</button> -->
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+
+
+
+<div class="modal" role="dialog" id="modal-repair">
+  <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+          <div class="container-fluid">
+              <div class="row">
+                  <div class="col-12 text-center">
+                      <label>Reparación</label>
+                  </div>
+
+              </div>
+              <div class="btn-close-modal">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+              </div>
+
+              <div class="row">
+                  <div class="col-8 ">
+                      <div class="md-form input-form-modal">
+                          <input type="text" id="type-repair" class="form-control " mdbInput value="Cambio táctil">
+                          <label for="type-repair">Tipo reparación</label>
+                      </div>
+                  </div>
+                  <div class="col-4">
+                      <div class="md-form input-form-modal">
+                          <input type="text" id="preice-repair" class="form-control" mdbInput value="70">
+                          <label for="preice-repair">Precio</label>
+                      </div>
+                  </div>
+
+              </div>
+
+              <div class="row">
+                  <div class="form-group col-8 select-form-modal">
+                      <label for="technical">Técnico</label>
+                      <select class="form-control" id="technical">
+                          <option>Dante</option>
+                          <option>Chulls</option>
+                      </select>
+                  </div>
+
+                  <div class="col-4 d-flex align-items-center">
+                      <button class="btn-sm btn-primary">Agregar</button>
+                  </div>
+              </div>
+
+              <div class="row">
+                  <div class="table-responsive-sm mt-2 col-12">
+                      <table mdbTable mdbTableScroll scrollY="false" maxHeight="">
+                        <thead>
+                          <tr>
+                            <th scope="col" class="align-middle text-center">Reparación</th>
+                            <th scope="col" class="align-middle">Precio</th>
+                            <th scope="col" class="align-middle">Técnico</th>
+                            <th scope="col" class="align-middle">Fecha</th>
+                            <th scope="col" class="align-middle text-center">Acción</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td class="align-middle">Cambio tactil</td>
+                            <td class="align-middle">s/70</td>
+                            <td class="align-middle">Dante</td>
+                            <td class="align-middle">02/02</td>
+                            <td class="align-middle text-center">
+                              <a [routerLink]="['/buyers/1/1']"  >
+                                  <i class="fas fa-pencil-alt"></i>
+                              </a>
+                            </td>
+                          </tr>
+
+
+                        </tbody>
+                      </table>
+                    </div>
+              </div>
+
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                  <button type="button" class="btn btn-primary">Guardar</button>
+                </div>
+          </div>
+      </div>
+  </div>
+</div>

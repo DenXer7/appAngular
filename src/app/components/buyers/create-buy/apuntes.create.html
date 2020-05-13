@@ -285,3 +285,96 @@ export class CreateBuyComponent implements OnInit {
   }
 
 }
+
+
+
+
+[
+    {
+        "id":1,
+        "model":"A10",
+        "price_buyer":200,
+        "detail":true
+    },
+    {
+        "id":2,
+        "model":"A20",
+        "price_buyer":300,
+        "detail":null
+    },
+    {
+        "id":3,
+        "model":"A50",
+        "price_buyer":500,
+        "detail":null
+    }
+]
+
+
+
+[
+    {
+        "id":1,
+        "model":"A10",
+        "price_buyer":200,
+        "detail":true
+    },
+    {
+        "id":2,
+        "model":"A20",
+        "price_buyer":300,
+        "detail":null
+    }
+]
+
+
+
+
+{
+	"data" : [
+
+				 {
+			        "model": "S10",
+			        "price_buy": 10,
+			        "detail": false
+			    },
+			    {
+			        "model": "S9",
+			        "price_buy": 20,
+			        "detail": true
+			    }
+
+			]
+}
+
+
+
+
+
+// foreach ($request->data as $mobil) {
+  //     $modelo = $mobil['model'];
+  //     $modelo = strtolower($modelo);
+
+  //     $product = new Product;
+  //     $product->buyer_id = $newBuyer->id;
+
+  //     $searchModel = ModelProduct::where('name', $modelo)->get();
+
+  //     if($searchModel->isEmpty()){
+  //         $newModel = new ModelProduct;
+  //         $newModel->name = $modelo;
+  //         $newModel->save();
+
+  //         $product->modelProduct_id = $newModel->id;
+  //     }
+
+  //     if(!$searchModel->isEmpty()){
+  //         $product->modelProduct_id = $searchModel[0]->id;
+  //     }
+
+  //     $product->price_buy = $mobil['price_buy'];
+  //     $product->detail = $mobil['detail'];
+  //     $product->save();
+  // }
+
+  // return response()->json(['data'=>$newBuyer],200);

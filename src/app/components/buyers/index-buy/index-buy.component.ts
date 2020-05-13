@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-// import { NewBuy } from "../../../models/buys/new-buy";
-
-import { BuyersService } from "../../../services/buyers.service";
+import { BuyersService } from '../../../services/buyers.service';
 
 @Component({
   selector: 'app-index-buyer',
@@ -13,41 +11,77 @@ export class IndexBuyComponent implements OnInit {
 
   constructor(private buyersService: BuyersService) { }
 
+  buyers = [];
+  buyersArray = {
+    data: []
+  };
+
+ arrayBuyerOrder;
+
+
   ngOnInit(): void {
+
     this.getBuyers();
   }
 
-  buyers: any = [];
-  
 
-  getBuyers(){
+  getBuyers() {
     this.buyersService.getBuyers().subscribe(
       res => {
-        this.buyers = res;
-
-        let temp = this.buyers.data[0].products;
-
-        let objeto = [];
-        for(let i = 0; i < this.buyers.data.length; i++){
-          let suma = 0;
-          for (let x = 0; x < this.buyers.data[i].products.length; x++) {
-            let preciox:any =[];
-            preciox[i] = this.buyers.data[i].products[x].price_buy;
-            suma +=preciox[i];
-          }
-          console.log(suma);
-          objeto.push(suma);
-          this.buyers.data[i].products.unshift({precioTotal:suma});
-        }
-        console.log(objeto);
-        console.log(this.buyers);
-
-      },  
+        this.buyers = res['data'];
+        this.buyersGroupArray(this.buyers);
+        this.calcTotal();
+      },
       err => console.log(err)
-    )
+    );
   }
 
+  buyersGroupArray(getArray) {
 
-  
+    while ( getArray.length  !== 0 ) {
+
+      let buyerTemp = {
+        buyer_id: '',
+        buyer_date: '',
+        total: '',
+        products: []
+      };
+
+      let arrayOrder = getArray.filter( res => res.buyer_id  === getArray[0].buyer_id);
+      getArray = getArray.filter( res => res.buyer_id  !== getArray[0].buyer_id);
+
+      buyerTemp.buyer_id = arrayOrder[0].buyer_id;
+      buyerTemp.buyer_date = arrayOrder[0].buyer_date;
+
+      //BORRAR buyer_id, buyer_date de cada objeto
+      // arrayOrder.forEach(element => {
+      //   delete element.buyer_id;
+      //   delete element.buyer_date;
+      // });
+
+      buyerTemp.products.push(arrayOrder);
+
+      this.buyersArray.data.push(buyerTemp);
+
+    }
+
+  }
+
+  calcTotal() {
+
+    for(let i = 0; i < this.buyersArray.data.length; i++) {
+
+      const element = this.buyersArray.data[i].products;
+      let suma = 0;
+
+      element[0].forEach(item => {
+        const price_buyer = item.price_buyer;
+        suma += price_buyer;
+      });
+
+      this.buyersArray.data[i].total = suma;
+    }
+  }
+
 
 }
