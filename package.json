@@ -9,14 +9,16 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "lite": "lite-server",
-    "postinstall": "ng build --prod",
+    "postinstall": "ng build --prod"
   },
   "private": true,
   "dependencies": {
     "@angular/animations": "~9.0.5",
     "@angular/cdk": "^9.1.1",
+    "@angular/cli": "~9.0.5",
     "@angular/common": "~9.0.5",
     "@angular/compiler": "~9.0.5",
+    "@angular/compiler-cli": "~9.0.5",
     "@angular/core": "~9.0.5",
     "@angular/forms": "~9.0.5",
     "@angular/platform-browser": "~9.0.5",
@@ -36,8 +38,6 @@
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.900.5",
-    "@angular/cli": "~9.0.5",
-    "@angular/compiler-cli": "~9.0.5",
     "@angular/language-service": "~9.0.5",
     "@types/jasmine": "~3.3.8",
     "@types/jasminewd2": "~2.0.3",
@@ -54,6 +54,10 @@
     "ts-node": "~7.0.0",
     "tslint": "~5.15.0",
     "typescript": "~3.7.5"
+  },
+  "engines": {
+    "node": "12.16.2",
+      "npm": "6.14.4"
   },
   "license": "MIT"
 }
